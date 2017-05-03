@@ -1,6 +1,7 @@
-#!/usr/bin/sh
+#!/bin/sh
 
-script_directory="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )" # Thanks: http://stackoverflow.com/questions/59895/getting-the-source-directory-of-a-bash-script-from-within
+script=$(readlink "$0")
+script_directory=$(dirname "$script")                                # Thanks: http://stackoverflow.com/questions/242538/unix-shell-script-find-out-which-directory-the-script-file-resides
 working_directory="${script_directory}/commit-log/"
 
 name=$(git config user.name)                                         # Thanks: http://stackoverflow.com/questions/7552054/git-cli-get-user-info-from-username
