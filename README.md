@@ -44,7 +44,7 @@ TODO
 
 A screenshot of a generated geo-commits.json using [http://geojson.io](http://geojson.io).
 
-![Screenshot geojson.io](images/screenshot-geojson.io.png "Screenshot geojson.io")
+![Screenshot geojson.io](https://raw.githubusercontent.com/blaues0cke/geo-commit/master/images/screenshot-geojson.io.png "Screenshot geojson.io")
     
 ## Thanks to
 
