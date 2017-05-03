@@ -1,7 +1,9 @@
 #!/usr/bin/sh
 
+
 working_directory="/Users/thomaskekeisen/Projects/geo-commit/commit-log/"
 
+name=$(git config user.name)                                # Thanks: http://stackoverflow.com/questions/7552054/git-cli-get-user-info-from-username
 commit_id=$(git log --format="%H" -n 1)                     # Thanks: http://stackoverflow.com/questions/19176359/how-to-get-the-last-commit-id-of-a-remote-repo-using-curl-like-command
 repository_name=$(basename `git rev-parse --show-toplevel`) # Thanks: http://stackoverflow.com/questions/15715825/how-do-you-get-git-repos-name-in-some-git-repository
 now=$(date +%Y-%m-%d:%H:%M:%S)                              # Thanks: http://stackoverflow.com/questions/1401482/yyyy-mm-dd-format-date-in-shell-script
@@ -13,16 +15,17 @@ if [ -n "$commit_id" ]; then
     log_file_path="${working_directory}/${commit_id}.geoLocation"
 
     output="{
-        \"commit_id\": "${commit_id}\",
+        \"commit_id\": \"${commit_id}\",
         \"repository_name\": \"${repository_name}\",
         \"date\": \"${now}\",
         \"latitude\": \"${latitude}\",
-        \"longitude\": \"${longitude}\"
+        \"longitude\": \"${longitude}\",
+        \"name\": \"${name}\"
     }"
 
-    echo "${output}"
+    echo $output
 
-    echo "${output}" > $log_file_path
+    echo $output > $log_file_path
 else
     echo "no commit found"
 fi
