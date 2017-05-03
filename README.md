@@ -7,6 +7,14 @@ Only runs on osx (so far).
 
 ---
 
+## Installation
+
+TODO
+
+## Screenshots
+
+TODO
+
 ## Usage
 
 To install the pre commit hook, just link or copy the `pre-commit` file to 
@@ -27,3 +35,7 @@ root directory (that one that contains the `.git` folder).
      
     alias geo_commit_on='mkdir -p ./.git/hooks && ln -s /path/to/original/pre-commit ./.git/hooks/pre-commit'
     alias geo_commit_off='rm ./.git/hooks/pre-commit'
+    
+## Thanks to
+
+TODO
