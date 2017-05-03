@@ -8,7 +8,7 @@ name=$(git config user.name)                                         # Thanks: h
 commit_id=$(git log --format="%H" -n 1)                              # Thanks: http://stackoverflow.com/questions/19176359/how-to-get-the-last-commit-id-of-a-remote-repo-using-curl-like-command
 repository_name=$(basename `git rev-parse --show-toplevel`)          # Thanks: http://stackoverflow.com/questions/15715825/how-do-you-get-git-repos-name-in-some-git-repository
 now=$(date +%Y-%m-%d:%H:%M:%S)                                       # Thanks: http://stackoverflow.com/questions/1401482/yyyy-mm-dd-format-date-in-shell-script
-geo_location=$(LocateMe -f {LAT},{LON})
+geo_location=$(/usr/local/bin/LocateMe -f {LAT},{LON})
 latitude=$(cut -d"," -f1 <<<"${geo_location}")                       # Thanks: https://unix.stackexchange.com/questions/312280/split-string-by-delimiter-and-get-n-th-element
 longitude=$(cut -d"," -f2 <<<"${geo_location}")                      # Thanks: https://unix.stackexchange.com/questions/312280/split-string-by-delimiter-and-get-n-th-element
 
