@@ -48,4 +48,7 @@ A screenshot of a generated geo-commits.json using [http://geojson.io](http://ge
     
 ## Thanks to
 
-TODO
+### Sounds
+
+Sounds are from [http://rcptones.com/dev_tones/](http://rcptones.com/dev_tones/). A nice sound sound set I use in some of my
+commercial projects.
