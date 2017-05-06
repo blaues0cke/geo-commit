@@ -4,16 +4,15 @@ A small pre commit hook that creates a log
 containing your current position on this planet. 
 Also includes a node script to convert the logs into a geojson file.
 
-Only runs on osx (so far).
+Only runs on osx (so far). Also, it seems to work offline in a car.
 
 ---
 
 ## Installation
 
-TODO
-
-
-
+Just download [LocateMe](http://iharder.sourceforge.net/current/macosx/locateme/) an copy the `LocateMe` file to 
+`/usr/local/bin/`. Then, download this repository and place it where ever you want. You just have to remember the 
+installation path of `geo-commit` for the hook installation.
 
 ## Hook Installation
 
@@ -38,7 +37,12 @@ root directory (that one that contains the `.git` folder).
     
 ## Export geo-commits.json
 
-TODO
+`geo-commit` is able to generate a `json`-file containing all your commits in `GeoJSON`. Just type
+
+    node export.js
+    
+to run the script. It will create a file called `commits.geolocation` in the same directory. You can import
+the file in [http://geojson.io](http://geojson.io) to view it immediately.
 
 ## Screenshots
 
